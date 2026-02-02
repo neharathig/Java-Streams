@@ -1,0 +1,21 @@
+package streamsinjava;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+//4
+public class FailedStudentCount {
+    public static void main(String[] args) {
+        List<Integer> marks = new ArrayList<>();
+        marks.add(80);
+        marks.add(59);
+        marks.add(10);
+        marks.add(15);
+        marks.add(20);
+        marks.add(35);
+        System.out.println(marks);
+        int failedStudentCount = (int) marks.stream().filter(i -> i < 35).count();
+        System.out.println(failedStudentCount);
+    }
+}
