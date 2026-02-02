@@ -1,0 +1,21 @@
+package interviewQuestions;
+
+import java.util.Arrays;
+import java.util.Optional;
+import java.util.stream.IntStream;
+
+public class SumOfArr {
+    public static void main(String[] args) {
+        int[] numbers = {5, 9, 11, 77, 8, 4, 0, 44, 99, 41, 21, 17,1, 91};
+
+       Integer sum = Arrays.stream(numbers).boxed().reduce((a, b) -> a + b).get();
+
+        System.out.println(sum);
+
+        int sum1 = IntStream.of(numbers).sum();
+
+        System.out.println(sum1);
+
+        
+    }
+}
